@@ -4,15 +4,20 @@ on:
   push:
     tags:
       - 'v*.*.*'  # This triggers on version tags (e.g., v1.0.0)
-  workflow_dispatch:  # Also allow manual triggering from the GitHub UI
+  workflow_dispatch:  # Allow manual triggering from the GitHub UI
 
 jobs:
   build:
     strategy:
       matrix:
-        platform: [ linux-amd64, linux-arm64, windows-amd64 ]
-    # For Windows, use windows-latest; for Linux targets, use ubuntu-latest.
-    runs-on: ${{ matrix.platform == 'windows-amd64' ? 'windows-latest' : 'ubuntu-latest' }}
+        include:
+          - platform: linux-amd64
+            runsOn: ubuntu-latest
+          - platform: linux-arm64
+            runsOn: ubuntu-latest
+          - platform: windows-amd64
+            runsOn: windows-latest
+    runs-on: ${{ matrix.runsOn }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -27,7 +32,7 @@ jobs:
       - name: Build Fat JAR
         run: ./gradlew clean shadowJar
 
-      # For Linux runners, install native-image if not already available.
+      # For Linux runners, install GraalVM native-image if not already installed.
       - name: Install GraalVM Native Image
         if: runner.os == 'Linux'
         run: |
@@ -80,4 +85,9 @@ jobs:
       - name: Upload Release Assets
         uses: actions/upload-release-asset@v1
         env:
-       
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: artifacts
+          asset_name: mytool-binaries.zip
+          asset_content_type: application/zip
