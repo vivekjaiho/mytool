@@ -22,12 +22,31 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
         
-      - name: Set Up GraalVM
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'graalvm-ce'
-          java-version: '17'
-          cache: gradle
+      # Only on Linux: Download and install GraalVM CE
+      - name: Download and Install GraalVM CE
+        if: runner.os == 'Linux'
+        run: |
+          export GRAALVM_VERSION=22.3.1
+          export JAVA_VERSION=17
+          export GRAALVM_TAR=graalvm-ce-java${JAVA_VERSION}-${GRAALVM_VERSION}-linux-amd64.tar.gz
+          export DOWNLOAD_URL=https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-${JAVA_VERSION}-${GRAALVM_VERSION}/${GRAALVM_TAR}
+          
+          echo "Downloading GraalVM from ${DOWNLOAD_URL}"
+          curl -L -o ${GRAALVM_TAR} ${DOWNLOAD_URL}
+          tar -xzf ${GRAALVM_TAR}
+          sudo mv graalvm-ce-java${JAVA_VERSION}-${GRAALVM_VERSION} /usr/lib/jvm/graalvm-ce-java${JAVA_VERSION}
+          
+          # Add GraalVM's bin directory to the PATH for subsequent steps
+          echo "/usr/lib/jvm/graalvm-ce-java${JAVA_VERSION}/bin" >> $GITHUB_PATH
+        shell: bash
+
+
+      # Install native-image using gu
+      - name: Install GraalVM Native Image
+        if: runner.os == 'Linux'
+        run: |
+          gu install native-image || echo "native-image already installed"
+        shell: bash
           
       - name: Make gradlew executable
         run: chmod +x gradlew
@@ -41,13 +60,6 @@ jobs:
 
       - name: Build Fat JAR
         run: ./gradlew clean shadowJar
-
-      # For Linux runners, install GraalVM native-image if not already installed.
-      - name: Install GraalVM Native Image
-        if: runner.os == 'Linux'
-        run: |
-          gu install native-image || echo "native-image already installed"
-        shell: bash
 
       - name: Build Native Executable
         run: |
