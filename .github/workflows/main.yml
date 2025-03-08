@@ -22,21 +22,21 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
         
-      # Only on Linux: Download and install GraalVM CE
       - name: Download and Install GraalVM CE
         if: runner.os == 'Linux'
         run: |
           export GRAALVM_VERSION=22.3.1
           export JAVA_VERSION=17
           export GRAALVM_TAR=graalvm-ce-java${JAVA_VERSION}-${GRAALVM_VERSION}-linux-amd64.tar.gz
-          export DOWNLOAD_URL=https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-${JAVA_VERSION}-${GRAALVM_VERSION}/${GRAALVM_TAR}
+          # Notice the plus sign between ${JAVA_VERSION} and ${GRAALVM_VERSION}
+          export DOWNLOAD_URL=https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-${JAVA_VERSION}+${GRAALVM_VERSION}/${GRAALVM_TAR}
           
           echo "Downloading GraalVM from ${DOWNLOAD_URL}"
           curl -L -o ${GRAALVM_TAR} ${DOWNLOAD_URL}
           tar -xzf ${GRAALVM_TAR}
           sudo mv graalvm-ce-java${JAVA_VERSION}-${GRAALVM_VERSION} /usr/lib/jvm/graalvm-ce-java${JAVA_VERSION}
           
-          # Add GraalVM's bin directory to the PATH for subsequent steps
+          # Make GraalVM's bin directory available to subsequent steps
           echo "/usr/lib/jvm/graalvm-ce-java${JAVA_VERSION}/bin" >> $GITHUB_PATH
         shell: bash
 
