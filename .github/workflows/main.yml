@@ -3,47 +3,38 @@ name: Build and Release Binaries
 on:
   push:
     tags:
-      - 'v*.*.*'  # Trigger on version tags like v1.0.0
+      - 'v*.*.*'  # This triggers on version tags (e.g., v1.0.0)
+  workflow_dispatch:  # Also allow manual triggering from the GitHub UI
 
 jobs:
   build:
     strategy:
       matrix:
-        # Matrix includes three platforms.
-        # For linux-arm64, you must have a self-hosted runner with the label "linux-arm64"
         platform: [ linux-amd64, linux-arm64, windows-amd64 ]
-    # Specify runner based on the target platform.
-    runs-on: ${{ 
-      matrix.platform == 'windows-amd64' 
-        ? 'windows-latest' 
-        : matrix.platform == 'linux-amd64' 
-          ? 'ubuntu-latest' 
-          : 'self-hosted' 
-    }}
+    # For Windows, use windows-latest; for Linux targets, use ubuntu-latest.
+    runs-on: ${{ matrix.platform == 'windows-amd64' ? 'windows-latest' : 'ubuntu-latest' }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Set up Java
+      - name: Set Up Java
         uses: actions/setup-java@v3
         with:
           distribution: temurin
           java-version: '17'
           cache: gradle
 
-      # For Linux runners, install GraalVM native-image if not already installed.
-      - name: Install GraalVM Native Image
-        if: runner.os == 'Linux'
-        run: |
-          # This assumes that gu is already in PATH via a GraalVM installation.
-          gu install native-image || echo "native-image already installed"
-        shell: bash
-
       - name: Build Fat JAR
         run: ./gradlew clean shadowJar
 
+      # For Linux runners, install native-image if not already available.
+      - name: Install GraalVM Native Image
+        if: runner.os == 'Linux'
+        run: |
+          gu install native-image || echo "native-image already installed"
+        shell: bash
+
       - name: Build Native Executable
-        id: build_native
         run: |
           if [ "${{ matrix.platform }}" == "linux-amd64" ]; then
             echo "Building Linux amd64 binary"
@@ -89,9 +80,4 @@ jobs:
       - name: Upload Release Assets
         uses: actions/upload-release-asset@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: artifacts
-          asset_name: mytool-binaries.zip
-          asset_content_type: application/zip
+       
