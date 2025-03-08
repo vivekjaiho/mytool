@@ -24,6 +24,6 @@ docker run  --rm -v "$(pwd)":/result vivek1262/mytool:latest --source nginx --fo
 
 
 ## Binaries
-- [mytool-linux-amd64](https://github.com/your-repo/releases/tag/v1.0)
-- [mytool-linux-arm64](https://github.com/your-repo/releases/tag/v1.0)
-- [mytool-windows-amd64.exe](https://github.com/your-repo/releases/tag/v1.0)
+- [mytool-linux-amd64](https://github.com/vivekjaiho/mytool/releases/tag/main)
+- [mytool-linux-arm64](https://github.com/vivekjaiho/mytool/releases/tag/main)
+- [mytool-windows-amd64.exe](https://github.com/vivekjaiho/mytool/releases/tag/main)
