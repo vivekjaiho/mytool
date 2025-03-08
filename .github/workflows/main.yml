@@ -6,6 +6,11 @@ on:
       - 'v*.*.*' # This triggers on version tags (e.g., v1.0.0)
   workflow_dispatch: # Allow manual triggering from the GitHub UI
 
+# Add this permissions block at the workflow level
+permissions:
+  contents: write
+  packages: write
+
 jobs:
   build:
     strategy:
@@ -89,6 +94,9 @@ jobs:
   release:
     needs: build
     runs-on: ubuntu-latest
+    # Add permissions at the job level too for extra certainty
+    permissions:
+      contents: write
     steps:
       - name: Download Artifacts
         uses: actions/download-artifact@v4
@@ -105,8 +113,23 @@ jobs:
           zip -r release-assets/mytool-binaries.zip artifacts/
         shell: bash
       
+      - name: Fix path for individual files
+        run: |
+          mkdir -p individual-files
+          if [ -d "artifacts/mytool-linux-amd64" ]; then
+            cp artifacts/mytool-linux-amd64/* individual-files/ 2>/dev/null || true
+          fi
+          if [ -d "artifacts/mytool-linux-arm64" ]; then
+            cp artifacts/mytool-linux-arm64/* individual-files/ 2>/dev/null || true
+          fi
+          if [ -d "artifacts/mytool-windows-amd64" ]; then
+            cp artifacts/mytool-windows-amd64/* individual-files/ 2>/dev/null || true
+          fi
+          find individual-files -type f | sort
+        shell: bash
+      
       - name: Create Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }}
@@ -114,8 +137,6 @@ jobs:
           prerelease: false
           files: |
             release-assets/mytool-binaries.zip
-            artifacts/mytool-linux-amd64/*
-            artifacts/mytool-linux-arm64/*
-            artifacts/mytool-windows-amd64/*
+            individual-files/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
