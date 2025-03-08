@@ -3,8 +3,8 @@ name: Build and Release Binaries
 on:
   push:
     tags:
-      - 'v*.*.*'  # This triggers on version tags (e.g., v1.0.0)
-  workflow_dispatch:  # Allow manual triggering from the GitHub UI
+      - 'v*.*.*' # This triggers on version tags (e.g., v1.0.0)
+  workflow_dispatch: # Allow manual triggering from the GitHub UI
 
 jobs:
   build:
@@ -17,50 +17,44 @@ jobs:
             runsOn: ubuntu-latest
           - platform: windows-amd64
             runsOn: windows-latest
+    
     runs-on: ${{ matrix.runsOn }}
+    
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-        
-
-      - uses: graalvm/setup-graalvm@v1
+      
+      - name: Set Up GraalVM
+        uses: graalvm/setup-graalvm@v1
         with:
           java-version: '17'
           distribution: 'graalvm'
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          
-
-
-      # Install native-image using gu
+      
       - name: Install GraalVM Native Image
         if: runner.os == 'Linux'
         run: |
           gu install native-image || echo "native-image already installed"
         shell: bash
-
-      - name: Build Native Executable on Windows
-        if: runner.os == 'Windows'
-        run: |
-          Write-Host "Building Windows amd64 binary"
-          & "$env:GRAALVM_HOME\bin\native-image.cmd" --no-fallback -jar build/libs/mytool-1.0.0-all.jar mytool-windows-amd64.exe
-        shell: pwsh
-
-
-          
+      
       - name: Make gradlew executable
+        if: runner.os != 'Windows'
         run: chmod +x gradlew
-
+        shell: bash
+      
       - name: Set Up Java
         uses: actions/setup-java@v3
         with:
           distribution: temurin
           java-version: '17'
           cache: gradle
-
+      
       - name: Build Fat JAR
         run: ./gradlew clean shadowJar
-
-      - name: Build Native Executable
+        shell: ${{ runner.os == 'Windows' && 'pwsh' || 'bash' }}
+      
+      - name: Build Native Executable for Linux
+        if: matrix.platform == 'linux-amd64' || matrix.platform == 'linux-arm64'
         run: |
           if [ "${{ matrix.platform }}" == "linux-amd64" ]; then
             echo "Building Linux amd64 binary"
@@ -68,20 +62,24 @@ jobs:
           elif [ "${{ matrix.platform }}" == "linux-arm64" ]; then
             echo "Building Linux arm64 binary"
             native-image --no-fallback -jar build/libs/mytool-1.0.0-all.jar mytool-linux-arm64
-          elif [ "${{ matrix.platform }}" == "windows-amd64" ]; then
-            echo "Building Windows amd64 binary"
-            native-image --no-fallback -jar build/libs/mytool-1.0.0-all.jar mytool-windows-amd64.exe
           fi
         shell: bash
-
+      
+      - name: Build Native Executable for Windows
+        if: matrix.platform == 'windows-amd64'
+        run: |
+          Write-Host "Building Windows amd64 binary"
+          & "$env:GRAALVM_HOME\bin\native-image.cmd" --no-fallback -jar build/libs/mytool-1.0.0-all.jar mytool-windows-amd64.exe
+        shell: pwsh
+      
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: mytool-${{ matrix.platform }}
           path: |
-            mytool-linux-amd64*
-            mytool-linux-arm64*
-            mytool-windows-amd64*.exe
+            mytool-${{ matrix.platform }}*
+            mytool-${{ matrix.platform }}.exe*
+
   release:
     needs: build
     runs-on: ubuntu-latest
@@ -90,7 +88,17 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           path: artifacts
-
+      
+      - name: List Downloaded Artifacts
+        run: find artifacts -type f | sort
+        shell: bash
+      
+      - name: Zip Artifacts
+        run: |
+          mkdir -p release-assets
+          zip -r release-assets/mytool-binaries.zip artifacts/
+        shell: bash
+      
       - name: Create GitHub Release
         id: create_release
         uses: actions/create-release@v1
@@ -98,16 +106,27 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          release_name: Release ${{ github.ref_name }}
           draft: false
           prerelease: false
-
+      
       - name: Upload Release Assets
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: artifacts
+          asset_path: release-assets/mytool-binaries.zip
           asset_name: mytool-binaries.zip
           asset_content_type: application/zip
+      
+      - name: Upload Individual Binaries
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          files: |
+            artifacts/mytool-linux-amd64/*
+            artifacts/mytool-linux-arm64/*
+            artifacts/mytool-windows-amd64/*
