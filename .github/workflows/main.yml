@@ -22,23 +22,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
         
-      - name: Download and Install GraalVM CE
-        if: runner.os == 'Linux'
-        run: |
-          export GRAALVM_VERSION=22.3.1
-          export JAVA_VERSION=17
-          export GRAALVM_TAR=graalvm-ce-java${JAVA_VERSION}-${GRAALVM_VERSION}-linux-amd64.tar.gz
-          # Notice the plus sign between ${JAVA_VERSION} and ${GRAALVM_VERSION}
-          export DOWNLOAD_URL=https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-${JAVA_VERSION}+${GRAALVM_VERSION}/${GRAALVM_TAR}
+
+      - uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '17'
+          distribution: 'graalvm'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           
-          echo "Downloading GraalVM from ${DOWNLOAD_URL}"
-          curl -L -o ${GRAALVM_TAR} ${DOWNLOAD_URL}
-          tar -xzf ${GRAALVM_TAR}
-          sudo mv graalvm-ce-java${JAVA_VERSION}-${GRAALVM_VERSION} /usr/lib/jvm/graalvm-ce-java${JAVA_VERSION}
-          
-          # Make GraalVM's bin directory available to subsequent steps
-          echo "/usr/lib/jvm/graalvm-ce-java${JAVA_VERSION}/bin" >> $GITHUB_PATH
-        shell: bash
 
 
       # Install native-image using gu
