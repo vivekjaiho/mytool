@@ -27,6 +27,5 @@ docker run --rm -v "$(pwd)":/result your-username/mytool:latest
 
 
 ## Binaries
-- [mytool-linux-amd64](https://github.com/your-repo/releases/tag/v1.0)
-- [mytool-linux-arm64](https://github.com/your-repo/releases/tag/v1.0)
-- [mytool-windows-amd64.exe](https://github.com/your-repo/releases/tag/v1.0)
+- [mytool-linux-amd64](https://github.com/vivekjaiho/mytool/releases/download/v1.0.0/mytool-linux-amd64)
+- [mytool-linux-arm64](https://github.com/vivekjaiho/mytool/releases/download/v1.0.0/mytool-linux-arm64)
