@@ -49,9 +49,15 @@ jobs:
           java-version: '17'
           cache: gradle
       
-      - name: Build Fat JAR
+      - name: Build Fat JAR (Linux)
+        if: runner.os != 'Windows'
         run: ./gradlew clean shadowJar
-        shell: ${{ runner.os == 'Windows' && 'pwsh' || 'bash' }}
+        shell: bash
+        
+      - name: Build Fat JAR (Windows)
+        if: runner.os == 'Windows'
+        run: ./gradlew clean shadowJar
+        shell: pwsh
       
       - name: Build Native Executable for Linux
         if: matrix.platform == 'linux-amd64' || matrix.platform == 'linux-arm64'
