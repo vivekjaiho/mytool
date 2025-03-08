@@ -37,6 +37,12 @@ jobs:
         run: |
           gu install native-image || echo "native-image already installed"
         shell: bash
+
+      - name: Install Native Image on Windows
+        if: runner.os == 'Windows'
+        run: |
+          gu install native-image || Write-Host "native-image already installed"
+        shell: pwsh
           
       - name: Make gradlew executable
         run: chmod +x gradlew
