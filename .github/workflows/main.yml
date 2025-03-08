@@ -21,7 +21,14 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-     
+        
+      - name: Set Up GraalVM
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'graalvm-ce'
+          java-version: '17'
+          cache: gradle
+          
       - name: Make gradlew executable
         run: chmod +x gradlew
 
