@@ -1,0 +1,601 @@
+{
+  "$schema" : "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:3960b86a-ea31-474c-b7a1-a033850ba951",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-03-08T00:17:38+05:30",
+    "tools" : {
+      "components" : [ {
+        "type" : "application",
+        "author" : "anchore",
+        "name" : "syft",
+        "version" : "1.20.0"
+      } ]
+    },
+    "component" : {
+      "bom-ref" : "86177d36ccfe444a",
+      "type" : "container",
+      "name" : "nginx",
+      "version" : "sha256:d1dd26e8d5ed5df3a3cb6400f98a5243e3e314c80c749c59a9db6c446c78966c"
+    },
+    "properties" : [ {
+      "name" : "syft:image:labels:maintainer",
+      "value" : "NGINX Docker Maintainers <docker-maint@nginx.com>"
+    } ]
+  },
+  "components" : [ {
+    "bom-ref" : "pkg:deb/debian/openssl@3.0.15-1~deb12u1?arch=arm64&distro=debian-12&package-id=c5efa7143754919b",
+    "type" : "library",
+    "publisher" : "Debian OpenSSL Team <pkg-openssl-devel@alioth-lists.debian.net>",
+    "name" : "openssl",
+    "version" : "3.0.15-1~deb12u1",
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0"
+      }
+    }, {
+      "license" : {
+        "id" : "GPL-1.0-only"
+      }
+    }, {
+      "license" : {
+        "id" : "GPL-1.0-or-later"
+      }
+    }, {
+      "license" : {
+        "name" : "Artistic"
+      }
+    } ],
+    "cpe" : "cpe:2.3:a:openssl:openssl:3.0.15-1\\~deb12u1:*:*:*:*:*:*:*",
+    "purl" : "pkg:deb/debian/openssl@3.0.15-1~deb12u1?arch=arm64&distro=debian-12",
+    "properties" : [ {
+      "name" : "syft:package:foundBy",
+      "value" : "dpkg-db-cataloger"
+    }, {
+      "name" : "syft:package:type",
+      "value" : "deb"
+    }, {
+      "name" : "syft:package:metadataType",
+      "value" : "dpkg-db-entry"
+    }, {
+      "name" : "syft:location:0:layerID",
+      "value" : "sha256:a0e17087bc6aa85a1e53141ba3aefd65390c0cf23bcf8e9e256be62dd1dbc431"
+    }, {
+      "name" : "syft:location:0:path",
+      "value" : "/usr/share/doc/openssl/copyright"
+    }, {
+      "name" : "syft:location:1:layerID",
+      "value" : "sha256:a0e17087bc6aa85a1e53141ba3aefd65390c0cf23bcf8e9e256be62dd1dbc431"
+    }, {
+      "name" : "syft:location:1:path",
+      "value" : "/var/lib/dpkg/info/openssl.conffiles"
+    }, {
+      "name" : "syft:location:2:layerID",
+      "value" : "sha256:a0e17087bc6aa85a1e53141ba3aefd65390c0cf23bcf8e9e256be62dd1dbc431"
+    }, {
+      "name" : "syft:location:2:path",
+      "value" : "/var/lib/dpkg/info/openssl.list"
+    }, {
+      "name" : "syft:location:3:layerID",
+      "value" : "sha256:a0e17087bc6aa85a1e53141ba3aefd65390c0cf23bcf8e9e256be62dd1dbc431"
+    }, {
+      "name" : "syft:location:3:path",
+      "value" : "/var/lib/dpkg/info/openssl.md5sums"
+    }, {
+      "name" : "syft:location:4:layerID",
+      "value" : "sha256:a0e17087bc6aa85a1e53141ba3aefd65390c0cf23bcf8e9e256be62dd1dbc431"
+    }, {
+      "name" : "syft:location:4:path",
+      "value" : "/var/lib/dpkg/info/openssl.postinst"
+    }, {
+      "name" : "syft:location:5:layerID",
+      "value" : "sha256:a0e17087bc6aa85a1e53141ba3aefd65390c0cf23bcf8e9e256be62dd1dbc431"
+    }, {
+      "name" : "syft:location:5:path",
+      "value" : "/var/lib/dpkg/status"
+    }, {
+      "name" : "syft:metadata:installedSize",
+      "value" : "2335"
+    } ]
+  }, {
+    "bom-ref" : "cedab0d6da1979d7",
+    "type" : "file",
+    "name" : "/etc/ssl/openssl.cnf",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "b6a981ae26a1f760bf28b9f5436592ae225967d6"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "7ae8cae2e64856b34c80276deb1dcf60f76da27bc1e00382201ba7bb7dc33311"
+    } ]
+  }, {
+    "bom-ref" : "f92f7246804898e9",
+    "type" : "file",
+    "name" : "/usr/bin/openssl",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "57753b8c2a44918386469c23b621b81b6e26ddb5"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "f1015c8c86c61ab455d75819497239d5cb2b1364ff751a5c80ee8bfadc769562"
+    } ]
+  }, {
+    "bom-ref" : "f7d53eb590c021ff",
+    "type" : "file",
+    "name" : "/usr/share/doc/openssl/copyright",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "b936c38070ff5b477030a02e903cc7cbc1f1f11e"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "6a7da622fe0637a334d2a8fc470852d2ffb77d9a2b2f930f854e32a41ad6ef35"
+    } ]
+  }, {
+    "bom-ref" : "e0202f838dd0bf36",
+    "type" : "file",
+    "name" : "/var/lib/dpkg/info/openssl.conffiles",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "346d0aee35ace0ba9f143fb08b20b9037a3e20f9"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "e1041b09158ee49185ee4010d18c7cf31b65b4aeb16d7e4d3bacb28793b8d364"
+    } ]
+  }, {
+    "bom-ref" : "f9ab8643769d80a5",
+    "type" : "file",
+    "name" : "/var/lib/dpkg/info/openssl.list",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "eaba3c984adf51240ac309feed6a513398743d45"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "48599bf54fef56d798e493821603ab76e8539ca1ef7ebb928df22b7f68d97be1"
+    } ]
+  }, {
+    "bom-ref" : "39070ad08e836c49",
+    "type" : "file",
+    "name" : "/var/lib/dpkg/info/openssl.md5sums",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "802346956d6b16296cbf92f37df87c11cea7bec6"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "32fb864c36b36924893a8785e6c0cd8b28b884e35fa689b035985d4e97a63d9e"
+    } ]
+  }, {
+    "bom-ref" : "f2ff06afa4afa2ad",
+    "type" : "file",
+    "name" : "/var/lib/dpkg/info/openssl.postinst",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "bf637e92daba15b892642f95b9e706568e97a4ee"
+    }, {
+      "alg" : "SHA-256",
+      "content" : "625ae8f649ec61f00e1ab53568a84f85f964f10fdbd9f25b800cc229205d1714"
+    } ]
+  } ],
+  "dependencies" : [ {
+    "ref" : "pkg:deb/debian/adduser@3.134?arch=all&distro=debian-12&package-id=0d50d654eb648ebd",
+    "dependsOn" : [ "pkg:deb/debian/passwd@1%3A4.13%2Bdfsg1-1%2Bb1?arch=arm64&distro=debian-12&package-id=5a8f989d68008338&upstream=shadow%401%3A4.13%2Bdfsg1-1" ]
+  }, {
+    "ref" : "pkg:deb/debian/apt@2.6.1?arch=arm64&distro=debian-12&package-id=aed0688665a9abde",
+    "dependsOn" : [ "pkg:deb/debian/adduser@3.134?arch=all&distro=debian-12&package-id=0d50d654eb648ebd", "pkg:deb/debian/debian-archive-keyring@2023.3%2Bdeb12u1?arch=all&distro=debian-12&package-id=b2678becdd0a0a9f", "pkg:deb/debian/gpgv@2.2.40-1.1?arch=arm64&distro=debian-12&package-id=6d7cf057998842ff&upstream=gnupg2", "pkg:deb/debian/libapt-pkg6.0@2.6.1?arch=arm64&distro=debian-12&package-id=8ff981677c135c54&upstream=apt", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgcc-s1@12.2.0-14?arch=arm64&distro=debian-12&package-id=1cdf12287c79fe5e&upstream=gcc-12", "pkg:deb/debian/libgnutls30@3.7.9-2%2Bdeb12u4?arch=arm64&distro=debian-12&package-id=b0daa08312ac9130&upstream=gnutls28", "pkg:deb/debian/libseccomp2@2.5.4-1%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=c443e4f736ec8f9d&upstream=libseccomp", "pkg:deb/debian/libstdc%2B%2B6@12.2.0-14?arch=arm64&distro=debian-12&package-id=d47f67610d2da2f8&upstream=gcc-12", "pkg:deb/debian/libsystemd0@252.33-1~deb12u1?arch=arm64&distro=debian-12&package-id=0096f21de00ac913&upstream=systemd" ]
+  }, {
+    "ref" : "pkg:deb/debian/base-files@12.4%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=8fada9cd4684f093",
+    "dependsOn" : [ "pkg:deb/debian/mawk@1.3.4.20200120-3.1?arch=arm64&distro=debian-12&package-id=0dd7f96d46b9713a" ]
+  }, {
+    "ref" : "pkg:deb/debian/base-passwd@3.6.1?arch=arm64&distro=debian-12&package-id=4afbe18b9cfde0c7",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libdebconfclient0@0.270?arch=arm64&distro=debian-12&package-id=0625a59267eeeea0&upstream=cdebconf", "pkg:deb/debian/libselinux1@3.4-1%2Bb6?arch=arm64&distro=debian-12&package-id=95c977220986abef&upstream=libselinux%403.4-1" ]
+  }, {
+    "ref" : "pkg:deb/debian/bash@5.2.15-2%2Bb7?arch=arm64&distro=debian-12&package-id=39acb104b6d0fb82&upstream=bash%405.2.15-2",
+    "dependsOn" : [ "pkg:deb/debian/base-files@12.4%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=8fada9cd4684f093", "pkg:deb/debian/debianutils@5.7-0.5~deb12u1?arch=arm64&distro=debian-12&package-id=4873c41475c96aa7", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libtinfo6@6.4-4?arch=arm64&distro=debian-12&package-id=8382d07d6cff402e&upstream=ncurses" ]
+  }, {
+    "ref" : "pkg:deb/debian/bsdutils@1%3A2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=9287f40a989692b3&upstream=util-linux%402.38.1-5%2Bdeb12u3",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libsystemd0@252.33-1~deb12u1?arch=arm64&distro=debian-12&package-id=0096f21de00ac913&upstream=systemd" ]
+  }, {
+    "ref" : "pkg:deb/debian/ca-certificates@20230311?arch=all&distro=debian-12&package-id=ee894968c7c14d6b",
+    "dependsOn" : [ "pkg:deb/debian/debconf@1.5.82?arch=all&distro=debian-12&package-id=cdc003dafb65af2e", "pkg:deb/debian/openssl@3.0.15-1~deb12u1?arch=arm64&distro=debian-12&package-id=c5efa7143754919b" ]
+  }, {
+    "ref" : "pkg:deb/debian/coreutils@9.1-1?arch=arm64&distro=debian-12&package-id=dca941ba14274268",
+    "dependsOn" : [ "pkg:deb/debian/libacl1@2.3.1-3?arch=arm64&distro=debian-12&package-id=76baee1e9b2c209e&upstream=acl", "pkg:deb/debian/libattr1@1%3A2.5.1-4?arch=arm64&distro=debian-12&package-id=5bdef02cfbb591b3&upstream=attr", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgmp10@2%3A6.2.1%2Bdfsg1-1.1?arch=arm64&distro=debian-12&package-id=f7e5b12427d803e2&upstream=gmp", "pkg:deb/debian/libselinux1@3.4-1%2Bb6?arch=arm64&distro=debian-12&package-id=95c977220986abef&upstream=libselinux%403.4-1" ]
+  }, {
+    "ref" : "pkg:deb/debian/curl@7.88.1-10%2Bdeb12u8?arch=arm64&distro=debian-12&package-id=08884e4be24f034a",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libcurl4@7.88.1-10%2Bdeb12u8?arch=arm64&distro=debian-12&package-id=c7f52029e941a569&upstream=curl", "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12&package-id=a170ac78823fc346&upstream=zlib" ]
+  }, {
+    "ref" : "pkg:deb/debian/dash@0.5.12-2?arch=arm64&distro=debian-12&package-id=28820cb4fceb9fd4",
+    "dependsOn" : [ "pkg:deb/debian/debianutils@5.7-0.5~deb12u1?arch=arm64&distro=debian-12&package-id=4873c41475c96aa7", "pkg:deb/debian/dpkg@1.21.22?arch=arm64&distro=debian-12&package-id=6d02683637f83170", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/debianutils@5.7-0.5~deb12u1?arch=arm64&distro=debian-12&package-id=4873c41475c96aa7",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/diffutils@1%3A3.8-4?arch=arm64&distro=debian-12&package-id=ab58b6dde6f4ee5b",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/dpkg@1.21.22?arch=arm64&distro=debian-12&package-id=6d02683637f83170",
+    "dependsOn" : [ "pkg:deb/debian/libbz2-1.0@1.0.8-5%2Bb1?arch=arm64&distro=debian-12&package-id=d2820d542d3fa52c&upstream=bzip2%401.0.8-5", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/liblzma5@5.4.1-0.2?arch=arm64&distro=debian-12&package-id=9ec1f27a2e25191d&upstream=xz-utils", "pkg:deb/debian/libmd0@1.0.4-2?arch=arm64&distro=debian-12&package-id=c4453a51643d95ba&upstream=libmd", "pkg:deb/debian/libselinux1@3.4-1%2Bb6?arch=arm64&distro=debian-12&package-id=95c977220986abef&upstream=libselinux%403.4-1", "pkg:deb/debian/libzstd1@1.5.4%2Bdfsg2-5?arch=arm64&distro=debian-12&package-id=ed0f3ed49cc25d51&upstream=libzstd", "pkg:deb/debian/tar@1.34%2Bdfsg-1.2%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=2f2707c84812dc3c", "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12&package-id=a170ac78823fc346&upstream=zlib" ]
+  }, {
+    "ref" : "pkg:deb/debian/e2fsprogs@1.47.0-2?arch=arm64&distro=debian-12&package-id=5d57f42b48af4746",
+    "dependsOn" : [ "pkg:deb/debian/libblkid1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=31031b630e9a55a7&upstream=util-linux", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libcom-err2@1.47.0-2?arch=arm64&distro=debian-12&package-id=d1127ccf245c06a0&upstream=e2fsprogs", "pkg:deb/debian/libext2fs2@1.47.0-2?arch=arm64&distro=debian-12&package-id=c9f371cd1fd0dd0d&upstream=e2fsprogs", "pkg:deb/debian/libss2@1.47.0-2?arch=arm64&distro=debian-12&package-id=af934ed5e9d997ca&upstream=e2fsprogs", "pkg:deb/debian/libuuid1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=149281e678fdbf34&upstream=util-linux", "pkg:deb/debian/logsave@1.47.0-2?arch=arm64&distro=debian-12&package-id=6c6c48daa39e00d5&upstream=e2fsprogs" ]
+  }, {
+    "ref" : "pkg:deb/debian/findutils@4.9.0-4?arch=arm64&distro=debian-12&package-id=76602e44073d32e0",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libselinux1@3.4-1%2Bb6?arch=arm64&distro=debian-12&package-id=95c977220986abef&upstream=libselinux%403.4-1" ]
+  }, {
+    "ref" : "pkg:deb/debian/fontconfig-config@2.14.1-4?arch=arm64&distro=debian-12&package-id=caf6402f72b4acd1&upstream=fontconfig",
+    "dependsOn" : [ "pkg:deb/debian/debconf@1.5.82?arch=all&distro=debian-12&package-id=cdc003dafb65af2e", "pkg:deb/debian/fonts-dejavu-core@2.37-6?arch=all&distro=debian-12&package-id=e20ddc43bd05e04a&upstream=fonts-dejavu" ]
+  }, {
+    "ref" : "pkg:deb/debian/gettext-base@0.21-12?arch=arm64&distro=debian-12&package-id=47b0fb5f3f1a363e&upstream=gettext",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/gpgv@2.2.40-1.1?arch=arm64&distro=debian-12&package-id=6d7cf057998842ff&upstream=gnupg2",
+    "dependsOn" : [ "pkg:deb/debian/libbz2-1.0@1.0.8-5%2Bb1?arch=arm64&distro=debian-12&package-id=d2820d542d3fa52c&upstream=bzip2%401.0.8-5", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgcrypt20@1.10.1-3?arch=arm64&distro=debian-12&package-id=629b91a1aab047fe", "pkg:deb/debian/libgpg-error0@1.46-1?arch=arm64&distro=debian-12&package-id=6c5298f5003d816e&upstream=libgpg-error", "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12&package-id=a170ac78823fc346&upstream=zlib" ]
+  }, {
+    "ref" : "pkg:deb/debian/grep@3.8-5?arch=arm64&distro=debian-12&package-id=e961ee6a842f3793",
+    "dependsOn" : [ "pkg:deb/debian/dpkg@1.21.22?arch=arm64&distro=debian-12&package-id=6d02683637f83170", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libpcre2-8-0@10.42-1?arch=arm64&distro=debian-12&package-id=8405f43b36a40e43&upstream=pcre2" ]
+  }, {
+    "ref" : "pkg:deb/debian/gzip@1.12-1?arch=arm64&distro=debian-12&package-id=78cfd7a861d83bed",
+    "dependsOn" : [ "pkg:deb/debian/dpkg@1.21.22?arch=arm64&distro=debian-12&package-id=6d02683637f83170", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/hostname@3.23%2Bnmu1?arch=arm64&distro=debian-12&package-id=8b1b6540db3d5a7e",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/init-system-helpers@1.65.2?arch=all&distro=debian-12&package-id=27e39e65cf0499e0",
+    "dependsOn" : [ "pkg:deb/debian/usr-is-merged@37~deb12u1?arch=all&distro=debian-12&package-id=03d3d9ecaebc5fd8&upstream=usrmerge" ]
+  }, {
+    "ref" : "pkg:deb/debian/libabsl20220623@20220623.1-1?arch=arm64&distro=debian-12&package-id=5cbfc6f2cd19d7bd&upstream=abseil",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgcc-s1@12.2.0-14?arch=arm64&distro=debian-12&package-id=1cdf12287c79fe5e&upstream=gcc-12", "pkg:deb/debian/libstdc%2B%2B6@12.2.0-14?arch=arm64&distro=debian-12&package-id=d47f67610d2da2f8&upstream=gcc-12" ]
+  }, {
+    "ref" : "pkg:deb/debian/libacl1@2.3.1-3?arch=arm64&distro=debian-12&package-id=76baee1e9b2c209e&upstream=acl",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libaom3@3.6.0-1%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=328a6dadc8e8f2b8&upstream=aom",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libapt-pkg6.0@2.6.1?arch=arm64&distro=debian-12&package-id=8ff981677c135c54&upstream=apt",
+    "dependsOn" : [ "pkg:deb/debian/libbz2-1.0@1.0.8-5%2Bb1?arch=arm64&distro=debian-12&package-id=d2820d542d3fa52c&upstream=bzip2%401.0.8-5", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgcc-s1@12.2.0-14?arch=arm64&distro=debian-12&package-id=1cdf12287c79fe5e&upstream=gcc-12", "pkg:deb/debian/libgcrypt20@1.10.1-3?arch=arm64&distro=debian-12&package-id=629b91a1aab047fe", "pkg:deb/debian/liblz4-1@1.9.4-1?arch=arm64&distro=debian-12&package-id=af4b5b745d89a8c4&upstream=lz4", "pkg:deb/debian/liblzma5@5.4.1-0.2?arch=arm64&distro=debian-12&package-id=9ec1f27a2e25191d&upstream=xz-utils", "pkg:deb/debian/libstdc%2B%2B6@12.2.0-14?arch=arm64&distro=debian-12&package-id=d47f67610d2da2f8&upstream=gcc-12", "pkg:deb/debian/libsystemd0@252.33-1~deb12u1?arch=arm64&distro=debian-12&package-id=0096f21de00ac913&upstream=systemd", "pkg:deb/debian/libudev1@252.33-1~deb12u1?arch=arm64&distro=debian-12&package-id=f11b97d2c7db6f96&upstream=systemd", "pkg:deb/debian/libxxhash0@0.8.1-1?arch=arm64&distro=debian-12&package-id=cd0e085f499c54bc&upstream=xxhash", "pkg:deb/debian/libzstd1@1.5.4%2Bdfsg2-5?arch=arm64&distro=debian-12&package-id=ed0f3ed49cc25d51&upstream=libzstd", "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12&package-id=a170ac78823fc346&upstream=zlib" ]
+  }, {
+    "ref" : "pkg:deb/debian/libattr1@1%3A2.5.1-4?arch=arm64&distro=debian-12&package-id=5bdef02cfbb591b3&upstream=attr",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libaudit1@1%3A3.0.9-1?arch=arm64&distro=debian-12&package-id=857a57df10c74f73&upstream=audit",
+    "dependsOn" : [ "pkg:deb/debian/libaudit-common@1%3A3.0.9-1?arch=all&distro=debian-12&package-id=cba144ca47be2f6d&upstream=audit", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libcap-ng0@0.8.3-1%2Bb3?arch=arm64&distro=debian-12&package-id=31b3573383920f72&upstream=libcap-ng%400.8.3-1" ]
+  }, {
+    "ref" : "pkg:deb/debian/libavif15@0.11.1-1?arch=arm64&distro=debian-12&package-id=c25f48734bad3b55&upstream=libavif",
+    "dependsOn" : [ "pkg:deb/debian/libaom3@3.6.0-1%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=328a6dadc8e8f2b8&upstream=aom", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libdav1d6@1.0.0-2%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=08ac9718403b107a&upstream=dav1d", "pkg:deb/debian/libgav1-1@0.18.0-1%2Bb1?arch=arm64&distro=debian-12&package-id=5b9cdc3ed3e4db50&upstream=libgav1%400.18.0-1", "pkg:deb/debian/librav1e0@0.5.1-6?arch=arm64&distro=debian-12&package-id=1b14aa40ff39705c&upstream=rust-rav1e", "pkg:deb/debian/libsvtav1enc1@1.4.1%2Bdfsg-1?arch=arm64&distro=debian-12&package-id=3da1d208bb46ad80&upstream=svt-av1", "pkg:deb/debian/libyuv0@0.0~git20230123.b2528b0-1?arch=arm64&distro=debian-12&package-id=65069e3618b4aefd&upstream=libyuv" ]
+  }, {
+    "ref" : "pkg:deb/debian/libblkid1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=31031b630e9a55a7&upstream=util-linux",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libbrotli1@1.0.9-2%2Bb6?arch=arm64&distro=debian-12&package-id=32613f42c053bd01&upstream=brotli%401.0.9-2",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libbsd0@0.11.7-2?arch=arm64&distro=debian-12&package-id=188a0f34f23f8c2b&upstream=libbsd",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libmd0@1.0.4-2?arch=arm64&distro=debian-12&package-id=c4453a51643d95ba&upstream=libmd" ]
+  }, {
+    "ref" : "pkg:deb/debian/libbz2-1.0@1.0.8-5%2Bb1?arch=arm64&distro=debian-12&package-id=d2820d542d3fa52c&upstream=bzip2%401.0.8-5",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libc-bin@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=afeafeb50c2326ac&upstream=glibc",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc",
+    "dependsOn" : [ "pkg:deb/debian/libgcc-s1@12.2.0-14?arch=arm64&distro=debian-12&package-id=1cdf12287c79fe5e&upstream=gcc-12" ]
+  }, {
+    "ref" : "pkg:deb/debian/libcap-ng0@0.8.3-1%2Bb3?arch=arm64&distro=debian-12&package-id=31b3573383920f72&upstream=libcap-ng%400.8.3-1",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libcap2@1%3A2.66-4?arch=arm64&distro=debian-12&package-id=3cb329160b16d87d",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libcom-err2@1.47.0-2?arch=arm64&distro=debian-12&package-id=d1127ccf245c06a0&upstream=e2fsprogs",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libcrypt1@1%3A4.4.33-2?arch=arm64&distro=debian-12&package-id=f7e096a3d31f60bd&upstream=libxcrypt",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libcurl4@7.88.1-10%2Bdeb12u8?arch=arm64&distro=debian-12&package-id=c7f52029e941a569&upstream=curl",
+    "dependsOn" : [ "pkg:deb/debian/libbrotli1@1.0.9-2%2Bb6?arch=arm64&distro=debian-12&package-id=32613f42c053bd01&upstream=brotli%401.0.9-2", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgssapi-krb5-2@1.20.1-2%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=4df169d7dfb2c27e&upstream=krb5", "pkg:deb/debian/libidn2-0@2.3.3-1%2Bb1?arch=arm64&distro=debian-12&package-id=36617166316466ae&upstream=libidn2%402.3.3-1", "pkg:deb/debian/libldap-2.5-0@2.5.13%2Bdfsg-5?arch=arm64&distro=debian-12&package-id=f9fccde289577b0e&upstream=openldap", "pkg:deb/debian/libnghttp2-14@1.52.0-1%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=edcf2a0700470ccb&upstream=nghttp2", "pkg:deb/debian/libpsl5@0.21.2-1?arch=arm64&distro=debian-12&package-id=85161725bba98483&upstream=libpsl", "pkg:deb/debian/librtmp1@2.4%2B20151223.gitfa8646d.1-2%2Bb2?arch=arm64&distro=debian-12&package-id=4d4befeb84a05e42&upstream=rtmpdump%402.4%2B20151223.gitfa8646d.1-2", "pkg:deb/debian/libssh2-1@1.10.0-3%2Bb1?arch=arm64&distro=debian-12&package-id=a360187d538cc7f0&upstream=libssh2%401.10.0-3", "pkg:deb/debian/libssl3@3.0.15-1~deb12u1?arch=arm64&distro=debian-12&package-id=a917ea38b01a8358&upstream=openssl", "pkg:deb/debian/libzstd1@1.5.4%2Bdfsg2-5?arch=arm64&distro=debian-12&package-id=ed0f3ed49cc25d51&upstream=libzstd", "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12&package-id=a170ac78823fc346&upstream=zlib" ]
+  }, {
+    "ref" : "pkg:deb/debian/libdav1d6@1.0.0-2%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=08ac9718403b107a&upstream=dav1d",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libdb5.3@5.3.28%2Bdfsg2-1?arch=arm64&distro=debian-12&package-id=323f534f61f4d2f6&upstream=db5.3",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libde265-0@1.0.11-1%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=46bd5b5182af3637&upstream=libde265",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgcc-s1@12.2.0-14?arch=arm64&distro=debian-12&package-id=1cdf12287c79fe5e&upstream=gcc-12", "pkg:deb/debian/libstdc%2B%2B6@12.2.0-14?arch=arm64&distro=debian-12&package-id=d47f67610d2da2f8&upstream=gcc-12" ]
+  }, {
+    "ref" : "pkg:deb/debian/libdebconfclient0@0.270?arch=arm64&distro=debian-12&package-id=0625a59267eeeea0&upstream=cdebconf",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libdeflate0@1.14-1?arch=arm64&distro=debian-12&package-id=62de3572e7ee3948&upstream=libdeflate",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libedit2@3.1-20221030-2?arch=arm64&distro=debian-12&package-id=dac89db493bdd296&upstream=libedit",
+    "dependsOn" : [ "pkg:deb/debian/libbsd0@0.11.7-2?arch=arm64&distro=debian-12&package-id=188a0f34f23f8c2b&upstream=libbsd", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libtinfo6@6.4-4?arch=arm64&distro=debian-12&package-id=8382d07d6cff402e&upstream=ncurses" ]
+  }, {
+    "ref" : "pkg:deb/debian/libexpat1@2.5.0-1%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=f34b4c90a694540c&upstream=expat",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libext2fs2@1.47.0-2?arch=arm64&distro=debian-12&package-id=c9f371cd1fd0dd0d&upstream=e2fsprogs",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libffi8@3.4.4-1?arch=arm64&distro=debian-12&package-id=92195d4e30787d15&upstream=libffi",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libfontconfig1@2.14.1-4?arch=arm64&distro=debian-12&package-id=b98745fccf107c9f&upstream=fontconfig",
+    "dependsOn" : [ "pkg:deb/debian/fontconfig-config@2.14.1-4?arch=arm64&distro=debian-12&package-id=caf6402f72b4acd1&upstream=fontconfig", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libexpat1@2.5.0-1%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=f34b4c90a694540c&upstream=expat", "pkg:deb/debian/libfreetype6@2.12.1%2Bdfsg-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=7c23cffe9963d805&upstream=freetype" ]
+  }, {
+    "ref" : "pkg:deb/debian/libfreetype6@2.12.1%2Bdfsg-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=7c23cffe9963d805&upstream=freetype",
+    "dependsOn" : [ "pkg:deb/debian/libbrotli1@1.0.9-2%2Bb6?arch=arm64&distro=debian-12&package-id=32613f42c053bd01&upstream=brotli%401.0.9-2", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libpng16-16@1.6.39-2?arch=arm64&distro=debian-12&package-id=6ae650349663934e&upstream=libpng1.6", "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12&package-id=a170ac78823fc346&upstream=zlib" ]
+  }, {
+    "ref" : "pkg:deb/debian/libgav1-1@0.18.0-1%2Bb1?arch=arm64&distro=debian-12&package-id=5b9cdc3ed3e4db50&upstream=libgav1%400.18.0-1",
+    "dependsOn" : [ "pkg:deb/debian/libabsl20220623@20220623.1-1?arch=arm64&distro=debian-12&package-id=5cbfc6f2cd19d7bd&upstream=abseil", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgcc-s1@12.2.0-14?arch=arm64&distro=debian-12&package-id=1cdf12287c79fe5e&upstream=gcc-12", "pkg:deb/debian/libstdc%2B%2B6@12.2.0-14?arch=arm64&distro=debian-12&package-id=d47f67610d2da2f8&upstream=gcc-12" ]
+  }, {
+    "ref" : "pkg:deb/debian/libgcc-s1@12.2.0-14?arch=arm64&distro=debian-12&package-id=1cdf12287c79fe5e&upstream=gcc-12",
+    "dependsOn" : [ "pkg:deb/debian/gcc-12-base@12.2.0-14?arch=arm64&distro=debian-12&package-id=202e79f34fae62ac&upstream=gcc-12", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libgcrypt20@1.10.1-3?arch=arm64&distro=debian-12&package-id=629b91a1aab047fe",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgpg-error0@1.46-1?arch=arm64&distro=debian-12&package-id=6c5298f5003d816e&upstream=libgpg-error" ]
+  }, {
+    "ref" : "pkg:deb/debian/libgd3@2.3.3-9?arch=arm64&distro=debian-12&package-id=4615f0a3932ed881&upstream=libgd2",
+    "dependsOn" : [ "pkg:deb/debian/libavif15@0.11.1-1?arch=arm64&distro=debian-12&package-id=c25f48734bad3b55&upstream=libavif", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libfontconfig1@2.14.1-4?arch=arm64&distro=debian-12&package-id=b98745fccf107c9f&upstream=fontconfig", "pkg:deb/debian/libfreetype6@2.12.1%2Bdfsg-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=7c23cffe9963d805&upstream=freetype", "pkg:deb/debian/libheif1@1.15.1-1%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=2e3b9ad013fdd9c3&upstream=libheif", "pkg:deb/debian/libjpeg62-turbo@1%3A2.1.5-2?arch=arm64&distro=debian-12&package-id=b93f72807228971e&upstream=libjpeg-turbo", "pkg:deb/debian/libpng16-16@1.6.39-2?arch=arm64&distro=debian-12&package-id=6ae650349663934e&upstream=libpng1.6", "pkg:deb/debian/libtiff6@4.5.0-6%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=8acbd22161722262&upstream=tiff", "pkg:deb/debian/libwebp7@1.2.4-0.2%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=559037686c00484e&upstream=libwebp", "pkg:deb/debian/libxpm4@1%3A3.5.12-1.1%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=2841ec50a992889b&upstream=libxpm" ]
+  }, {
+    "ref" : "pkg:deb/debian/libgeoip1@1.6.12-10?arch=arm64&distro=debian-12&package-id=b44f3ed019e384b9&upstream=geoip",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libgmp10@2%3A6.2.1%2Bdfsg1-1.1?arch=arm64&distro=debian-12&package-id=f7e5b12427d803e2&upstream=gmp",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libgnutls30@3.7.9-2%2Bdeb12u4?arch=arm64&distro=debian-12&package-id=b0daa08312ac9130&upstream=gnutls28",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgmp10@2%3A6.2.1%2Bdfsg1-1.1?arch=arm64&distro=debian-12&package-id=f7e5b12427d803e2&upstream=gmp", "pkg:deb/debian/libhogweed6@3.8.1-2?arch=arm64&distro=debian-12&package-id=52582142c34f5681&upstream=nettle", "pkg:deb/debian/libidn2-0@2.3.3-1%2Bb1?arch=arm64&distro=debian-12&package-id=36617166316466ae&upstream=libidn2%402.3.3-1", "pkg:deb/debian/libnettle8@3.8.1-2?arch=arm64&distro=debian-12&package-id=cecd92127cc4aa89&upstream=nettle", "pkg:deb/debian/libp11-kit0@0.24.1-2?arch=arm64&distro=debian-12&package-id=08520b228682a010&upstream=p11-kit", "pkg:deb/debian/libtasn1-6@4.19.0-2%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=2b80b6b9741e4648", "pkg:deb/debian/libunistring2@1.0-2?arch=arm64&distro=debian-12&package-id=b36379d350733b3a&upstream=libunistring" ]
+  }, {
+    "ref" : "pkg:deb/debian/libgpg-error0@1.46-1?arch=arm64&distro=debian-12&package-id=6c5298f5003d816e&upstream=libgpg-error",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libgssapi-krb5-2@1.20.1-2%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=4df169d7dfb2c27e&upstream=krb5",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libcom-err2@1.47.0-2?arch=arm64&distro=debian-12&package-id=d1127ccf245c06a0&upstream=e2fsprogs", "pkg:deb/debian/libk5crypto3@1.20.1-2%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=1cba0d28c9279caa&upstream=krb5", "pkg:deb/debian/libkrb5-3@1.20.1-2%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=009d5b6154daa7f9&upstream=krb5", "pkg:deb/debian/libkrb5support0@1.20.1-2%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=04c791a83220a8b4&upstream=krb5" ]
+  }, {
+    "ref" : "pkg:deb/debian/libheif1@1.15.1-1%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=2e3b9ad013fdd9c3&upstream=libheif",
+    "dependsOn" : [ "pkg:deb/debian/libaom3@3.6.0-1%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=328a6dadc8e8f2b8&upstream=aom", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libdav1d6@1.0.0-2%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=08ac9718403b107a&upstream=dav1d", "pkg:deb/debian/libde265-0@1.0.11-1%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=46bd5b5182af3637&upstream=libde265", "pkg:deb/debian/libgcc-s1@12.2.0-14?arch=arm64&distro=debian-12&package-id=1cdf12287c79fe5e&upstream=gcc-12", "pkg:deb/debian/libstdc%2B%2B6@12.2.0-14?arch=arm64&distro=debian-12&package-id=d47f67610d2da2f8&upstream=gcc-12", "pkg:deb/debian/libx265-199@3.5-2%2Bb1?arch=arm64&distro=debian-12&package-id=9af32191da2f9635&upstream=x265%403.5-2", "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12&package-id=a170ac78823fc346&upstream=zlib" ]
+  }, {
+    "ref" : "pkg:deb/debian/libhogweed6@3.8.1-2?arch=arm64&distro=debian-12&package-id=52582142c34f5681&upstream=nettle",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgmp10@2%3A6.2.1%2Bdfsg1-1.1?arch=arm64&distro=debian-12&package-id=f7e5b12427d803e2&upstream=gmp", "pkg:deb/debian/libnettle8@3.8.1-2?arch=arm64&distro=debian-12&package-id=cecd92127cc4aa89&upstream=nettle" ]
+  }, {
+    "ref" : "pkg:deb/debian/libicu72@72.1-3?arch=arm64&distro=debian-12&package-id=27430bc3fe5089b3&upstream=icu",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgcc-s1@12.2.0-14?arch=arm64&distro=debian-12&package-id=1cdf12287c79fe5e&upstream=gcc-12", "pkg:deb/debian/libstdc%2B%2B6@12.2.0-14?arch=arm64&distro=debian-12&package-id=d47f67610d2da2f8&upstream=gcc-12" ]
+  }, {
+    "ref" : "pkg:deb/debian/libidn2-0@2.3.3-1%2Bb1?arch=arm64&distro=debian-12&package-id=36617166316466ae&upstream=libidn2%402.3.3-1",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libunistring2@1.0-2?arch=arm64&distro=debian-12&package-id=b36379d350733b3a&upstream=libunistring" ]
+  }, {
+    "ref" : "pkg:deb/debian/libjbig0@2.1-6.1?arch=arm64&distro=debian-12&package-id=880195d26a728a55&upstream=jbigkit",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libjpeg62-turbo@1%3A2.1.5-2?arch=arm64&distro=debian-12&package-id=b93f72807228971e&upstream=libjpeg-turbo",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libk5crypto3@1.20.1-2%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=1cba0d28c9279caa&upstream=krb5",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libkrb5support0@1.20.1-2%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=04c791a83220a8b4&upstream=krb5" ]
+  }, {
+    "ref" : "pkg:deb/debian/libkeyutils1@1.6.3-2?arch=arm64&distro=debian-12&package-id=e238dff8a4372f13&upstream=keyutils",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libkrb5-3@1.20.1-2%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=009d5b6154daa7f9&upstream=krb5",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libcom-err2@1.47.0-2?arch=arm64&distro=debian-12&package-id=d1127ccf245c06a0&upstream=e2fsprogs", "pkg:deb/debian/libk5crypto3@1.20.1-2%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=1cba0d28c9279caa&upstream=krb5", "pkg:deb/debian/libkeyutils1@1.6.3-2?arch=arm64&distro=debian-12&package-id=e238dff8a4372f13&upstream=keyutils", "pkg:deb/debian/libkrb5support0@1.20.1-2%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=04c791a83220a8b4&upstream=krb5", "pkg:deb/debian/libssl3@3.0.15-1~deb12u1?arch=arm64&distro=debian-12&package-id=a917ea38b01a8358&upstream=openssl" ]
+  }, {
+    "ref" : "pkg:deb/debian/libkrb5support0@1.20.1-2%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=04c791a83220a8b4&upstream=krb5",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libldap-2.5-0@2.5.13%2Bdfsg-5?arch=arm64&distro=debian-12&package-id=f9fccde289577b0e&upstream=openldap",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgnutls30@3.7.9-2%2Bdeb12u4?arch=arm64&distro=debian-12&package-id=b0daa08312ac9130&upstream=gnutls28", "pkg:deb/debian/libsasl2-2@2.1.28%2Bdfsg-10?arch=arm64&distro=debian-12&package-id=da054e6d2276c38b&upstream=cyrus-sasl2" ]
+  }, {
+    "ref" : "pkg:deb/debian/liblerc4@4.0.0%2Bds-2?arch=arm64&distro=debian-12&package-id=a8c9ddeac58807ff&upstream=lerc",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgcc-s1@12.2.0-14?arch=arm64&distro=debian-12&package-id=1cdf12287c79fe5e&upstream=gcc-12", "pkg:deb/debian/libstdc%2B%2B6@12.2.0-14?arch=arm64&distro=debian-12&package-id=d47f67610d2da2f8&upstream=gcc-12" ]
+  }, {
+    "ref" : "pkg:deb/debian/liblz4-1@1.9.4-1?arch=arm64&distro=debian-12&package-id=af4b5b745d89a8c4&upstream=lz4",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/liblzma5@5.4.1-0.2?arch=arm64&distro=debian-12&package-id=9ec1f27a2e25191d&upstream=xz-utils",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libmd0@1.0.4-2?arch=arm64&distro=debian-12&package-id=c4453a51643d95ba&upstream=libmd",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libmount1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=0e82cdbb39a98409&upstream=util-linux",
+    "dependsOn" : [ "pkg:deb/debian/libblkid1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=31031b630e9a55a7&upstream=util-linux", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libselinux1@3.4-1%2Bb6?arch=arm64&distro=debian-12&package-id=95c977220986abef&upstream=libselinux%403.4-1" ]
+  }, {
+    "ref" : "pkg:deb/debian/libnettle8@3.8.1-2?arch=arm64&distro=debian-12&package-id=cecd92127cc4aa89&upstream=nettle",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libnghttp2-14@1.52.0-1%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=edcf2a0700470ccb&upstream=nghttp2",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libnuma1@2.0.16-1?arch=arm64&distro=debian-12&package-id=c0aeb4162e8d86b4&upstream=numactl",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libp11-kit0@0.24.1-2?arch=arm64&distro=debian-12&package-id=08520b228682a010&upstream=p11-kit",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libffi8@3.4.4-1?arch=arm64&distro=debian-12&package-id=92195d4e30787d15&upstream=libffi" ]
+  }, {
+    "ref" : "pkg:deb/debian/libpam-modules-bin@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=15927d93f877f2c9&upstream=pam",
+    "dependsOn" : [ "pkg:deb/debian/libaudit1@1%3A3.0.9-1?arch=arm64&distro=debian-12&package-id=857a57df10c74f73&upstream=audit", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libcrypt1@1%3A4.4.33-2?arch=arm64&distro=debian-12&package-id=f7e096a3d31f60bd&upstream=libxcrypt", "pkg:deb/debian/libpam0g@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=be57b1c45f01ad58&upstream=pam", "pkg:deb/debian/libselinux1@3.4-1%2Bb6?arch=arm64&distro=debian-12&package-id=95c977220986abef&upstream=libselinux%403.4-1" ]
+  }, {
+    "ref" : "pkg:deb/debian/libpam-modules@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=50cd9ca9242b679d&upstream=pam",
+    "dependsOn" : [ "pkg:deb/debian/debconf@1.5.82?arch=all&distro=debian-12&package-id=cdc003dafb65af2e", "pkg:deb/debian/libaudit1@1%3A3.0.9-1?arch=arm64&distro=debian-12&package-id=857a57df10c74f73&upstream=audit", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libcrypt1@1%3A4.4.33-2?arch=arm64&distro=debian-12&package-id=f7e096a3d31f60bd&upstream=libxcrypt", "pkg:deb/debian/libdb5.3@5.3.28%2Bdfsg2-1?arch=arm64&distro=debian-12&package-id=323f534f61f4d2f6&upstream=db5.3", "pkg:deb/debian/libpam-modules-bin@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=15927d93f877f2c9&upstream=pam", "pkg:deb/debian/libpam0g@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=be57b1c45f01ad58&upstream=pam", "pkg:deb/debian/libselinux1@3.4-1%2Bb6?arch=arm64&distro=debian-12&package-id=95c977220986abef&upstream=libselinux%403.4-1" ]
+  }, {
+    "ref" : "pkg:deb/debian/libpam-runtime@1.5.2-6%2Bdeb12u1?arch=all&distro=debian-12&package-id=a126848aaa09495b&upstream=pam",
+    "dependsOn" : [ "pkg:deb/debian/debconf@1.5.82?arch=all&distro=debian-12&package-id=cdc003dafb65af2e", "pkg:deb/debian/libpam-modules@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=50cd9ca9242b679d&upstream=pam" ]
+  }, {
+    "ref" : "pkg:deb/debian/libpam0g@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=be57b1c45f01ad58&upstream=pam",
+    "dependsOn" : [ "pkg:deb/debian/debconf@1.5.82?arch=all&distro=debian-12&package-id=cdc003dafb65af2e", "pkg:deb/debian/libaudit1@1%3A3.0.9-1?arch=arm64&distro=debian-12&package-id=857a57df10c74f73&upstream=audit", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libpcre2-8-0@10.42-1?arch=arm64&distro=debian-12&package-id=8405f43b36a40e43&upstream=pcre2",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libpng16-16@1.6.39-2?arch=arm64&distro=debian-12&package-id=6ae650349663934e&upstream=libpng1.6",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12&package-id=a170ac78823fc346&upstream=zlib" ]
+  }, {
+    "ref" : "pkg:deb/debian/libpsl5@0.21.2-1?arch=arm64&distro=debian-12&package-id=85161725bba98483&upstream=libpsl",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libidn2-0@2.3.3-1%2Bb1?arch=arm64&distro=debian-12&package-id=36617166316466ae&upstream=libidn2%402.3.3-1", "pkg:deb/debian/libunistring2@1.0-2?arch=arm64&distro=debian-12&package-id=b36379d350733b3a&upstream=libunistring" ]
+  }, {
+    "ref" : "pkg:deb/debian/librav1e0@0.5.1-6?arch=arm64&distro=debian-12&package-id=1b14aa40ff39705c&upstream=rust-rav1e",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgcc-s1@12.2.0-14?arch=arm64&distro=debian-12&package-id=1cdf12287c79fe5e&upstream=gcc-12" ]
+  }, {
+    "ref" : "pkg:deb/debian/librtmp1@2.4%2B20151223.gitfa8646d.1-2%2Bb2?arch=arm64&distro=debian-12&package-id=4d4befeb84a05e42&upstream=rtmpdump%402.4%2B20151223.gitfa8646d.1-2",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgmp10@2%3A6.2.1%2Bdfsg1-1.1?arch=arm64&distro=debian-12&package-id=f7e5b12427d803e2&upstream=gmp", "pkg:deb/debian/libgnutls30@3.7.9-2%2Bdeb12u4?arch=arm64&distro=debian-12&package-id=b0daa08312ac9130&upstream=gnutls28", "pkg:deb/debian/libhogweed6@3.8.1-2?arch=arm64&distro=debian-12&package-id=52582142c34f5681&upstream=nettle", "pkg:deb/debian/libnettle8@3.8.1-2?arch=arm64&distro=debian-12&package-id=cecd92127cc4aa89&upstream=nettle", "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12&package-id=a170ac78823fc346&upstream=zlib" ]
+  }, {
+    "ref" : "pkg:deb/debian/libsasl2-2@2.1.28%2Bdfsg-10?arch=arm64&distro=debian-12&package-id=da054e6d2276c38b&upstream=cyrus-sasl2",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libsasl2-modules-db@2.1.28%2Bdfsg-10?arch=arm64&distro=debian-12&package-id=31ac98e8b281bf9d&upstream=cyrus-sasl2" ]
+  }, {
+    "ref" : "pkg:deb/debian/libsasl2-modules-db@2.1.28%2Bdfsg-10?arch=arm64&distro=debian-12&package-id=31ac98e8b281bf9d&upstream=cyrus-sasl2",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libdb5.3@5.3.28%2Bdfsg2-1?arch=arm64&distro=debian-12&package-id=323f534f61f4d2f6&upstream=db5.3" ]
+  }, {
+    "ref" : "pkg:deb/debian/libseccomp2@2.5.4-1%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=c443e4f736ec8f9d&upstream=libseccomp",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libselinux1@3.4-1%2Bb6?arch=arm64&distro=debian-12&package-id=95c977220986abef&upstream=libselinux%403.4-1",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libpcre2-8-0@10.42-1?arch=arm64&distro=debian-12&package-id=8405f43b36a40e43&upstream=pcre2" ]
+  }, {
+    "ref" : "pkg:deb/debian/libsemanage2@3.4-1%2Bb5?arch=arm64&distro=debian-12&package-id=3488db2b3bc193da&upstream=libsemanage%403.4-1",
+    "dependsOn" : [ "pkg:deb/debian/libaudit1@1%3A3.0.9-1?arch=arm64&distro=debian-12&package-id=857a57df10c74f73&upstream=audit", "pkg:deb/debian/libbz2-1.0@1.0.8-5%2Bb1?arch=arm64&distro=debian-12&package-id=d2820d542d3fa52c&upstream=bzip2%401.0.8-5", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libselinux1@3.4-1%2Bb6?arch=arm64&distro=debian-12&package-id=95c977220986abef&upstream=libselinux%403.4-1", "pkg:deb/debian/libsemanage-common@3.4-1?arch=all&distro=debian-12&package-id=4fa85906a1d7af8c&upstream=libsemanage", "pkg:deb/debian/libsepol2@3.4-2.1?arch=arm64&distro=debian-12&package-id=6bf5b43ef59d2cc5&upstream=libsepol" ]
+  }, {
+    "ref" : "pkg:deb/debian/libsepol2@3.4-2.1?arch=arm64&distro=debian-12&package-id=6bf5b43ef59d2cc5&upstream=libsepol",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libsmartcols1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=14c9ea59afcbb006&upstream=util-linux",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libss2@1.47.0-2?arch=arm64&distro=debian-12&package-id=af934ed5e9d997ca&upstream=e2fsprogs",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libcom-err2@1.47.0-2?arch=arm64&distro=debian-12&package-id=d1127ccf245c06a0&upstream=e2fsprogs" ]
+  }, {
+    "ref" : "pkg:deb/debian/libssh2-1@1.10.0-3%2Bb1?arch=arm64&distro=debian-12&package-id=a360187d538cc7f0&upstream=libssh2%401.10.0-3",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libssl3@3.0.15-1~deb12u1?arch=arm64&distro=debian-12&package-id=a917ea38b01a8358&upstream=openssl", "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12&package-id=a170ac78823fc346&upstream=zlib" ]
+  }, {
+    "ref" : "pkg:deb/debian/libssl3@3.0.15-1~deb12u1?arch=arm64&distro=debian-12&package-id=a917ea38b01a8358&upstream=openssl",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libstdc%2B%2B6@12.2.0-14?arch=arm64&distro=debian-12&package-id=d47f67610d2da2f8&upstream=gcc-12",
+    "dependsOn" : [ "pkg:deb/debian/gcc-12-base@12.2.0-14?arch=arm64&distro=debian-12&package-id=202e79f34fae62ac&upstream=gcc-12", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgcc-s1@12.2.0-14?arch=arm64&distro=debian-12&package-id=1cdf12287c79fe5e&upstream=gcc-12" ]
+  }, {
+    "ref" : "pkg:deb/debian/libsvtav1enc1@1.4.1%2Bdfsg-1?arch=arm64&distro=debian-12&package-id=3da1d208bb46ad80&upstream=svt-av1",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libsystemd0@252.33-1~deb12u1?arch=arm64&distro=debian-12&package-id=0096f21de00ac913&upstream=systemd",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libcap2@1%3A2.66-4?arch=arm64&distro=debian-12&package-id=3cb329160b16d87d", "pkg:deb/debian/libgcrypt20@1.10.1-3?arch=arm64&distro=debian-12&package-id=629b91a1aab047fe", "pkg:deb/debian/liblz4-1@1.9.4-1?arch=arm64&distro=debian-12&package-id=af4b5b745d89a8c4&upstream=lz4", "pkg:deb/debian/liblzma5@5.4.1-0.2?arch=arm64&distro=debian-12&package-id=9ec1f27a2e25191d&upstream=xz-utils", "pkg:deb/debian/libzstd1@1.5.4%2Bdfsg2-5?arch=arm64&distro=debian-12&package-id=ed0f3ed49cc25d51&upstream=libzstd" ]
+  }, {
+    "ref" : "pkg:deb/debian/libtasn1-6@4.19.0-2%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=2b80b6b9741e4648",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libtiff6@4.5.0-6%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=8acbd22161722262&upstream=tiff",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libdeflate0@1.14-1?arch=arm64&distro=debian-12&package-id=62de3572e7ee3948&upstream=libdeflate", "pkg:deb/debian/libjbig0@2.1-6.1?arch=arm64&distro=debian-12&package-id=880195d26a728a55&upstream=jbigkit", "pkg:deb/debian/libjpeg62-turbo@1%3A2.1.5-2?arch=arm64&distro=debian-12&package-id=b93f72807228971e&upstream=libjpeg-turbo", "pkg:deb/debian/liblerc4@4.0.0%2Bds-2?arch=arm64&distro=debian-12&package-id=a8c9ddeac58807ff&upstream=lerc", "pkg:deb/debian/liblzma5@5.4.1-0.2?arch=arm64&distro=debian-12&package-id=9ec1f27a2e25191d&upstream=xz-utils", "pkg:deb/debian/libwebp7@1.2.4-0.2%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=559037686c00484e&upstream=libwebp", "pkg:deb/debian/libzstd1@1.5.4%2Bdfsg2-5?arch=arm64&distro=debian-12&package-id=ed0f3ed49cc25d51&upstream=libzstd", "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12&package-id=a170ac78823fc346&upstream=zlib" ]
+  }, {
+    "ref" : "pkg:deb/debian/libtinfo6@6.4-4?arch=arm64&distro=debian-12&package-id=8382d07d6cff402e&upstream=ncurses",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libudev1@252.33-1~deb12u1?arch=arm64&distro=debian-12&package-id=f11b97d2c7db6f96&upstream=systemd",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libunistring2@1.0-2?arch=arm64&distro=debian-12&package-id=b36379d350733b3a&upstream=libunistring",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libuuid1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=149281e678fdbf34&upstream=util-linux",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libwebp7@1.2.4-0.2%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=559037686c00484e&upstream=libwebp",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libx11-6@2%3A1.8.4-2%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=a3e871446b414107&upstream=libx11",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libx11-data@2%3A1.8.4-2%2Bdeb12u2?arch=all&distro=debian-12&package-id=babfedf403ae1b57&upstream=libx11", "pkg:deb/debian/libxcb1@1.15-1?arch=arm64&distro=debian-12&package-id=98bd049cc1fd0363&upstream=libxcb" ]
+  }, {
+    "ref" : "pkg:deb/debian/libx265-199@3.5-2%2Bb1?arch=arm64&distro=debian-12&package-id=9af32191da2f9635&upstream=x265%403.5-2",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libnuma1@2.0.16-1?arch=arm64&distro=debian-12&package-id=c0aeb4162e8d86b4&upstream=numactl", "pkg:deb/debian/libstdc%2B%2B6@12.2.0-14?arch=arm64&distro=debian-12&package-id=d47f67610d2da2f8&upstream=gcc-12" ]
+  }, {
+    "ref" : "pkg:deb/debian/libxau6@1%3A1.0.9-1?arch=arm64&distro=debian-12&package-id=820b486aaa8825ce&upstream=libxau",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libxcb1@1.15-1?arch=arm64&distro=debian-12&package-id=98bd049cc1fd0363&upstream=libxcb",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libxau6@1%3A1.0.9-1?arch=arm64&distro=debian-12&package-id=820b486aaa8825ce&upstream=libxau", "pkg:deb/debian/libxdmcp6@1%3A1.1.2-3?arch=arm64&distro=debian-12&package-id=e42aaacf6ee6c753&upstream=libxdmcp" ]
+  }, {
+    "ref" : "pkg:deb/debian/libxdmcp6@1%3A1.1.2-3?arch=arm64&distro=debian-12&package-id=e42aaacf6ee6c753&upstream=libxdmcp",
+    "dependsOn" : [ "pkg:deb/debian/libbsd0@0.11.7-2?arch=arm64&distro=debian-12&package-id=188a0f34f23f8c2b&upstream=libbsd", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libxml2@2.9.14%2Bdfsg-1.3~deb12u1?arch=arm64&distro=debian-12&package-id=33d98eb1837c151a",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libicu72@72.1-3?arch=arm64&distro=debian-12&package-id=27430bc3fe5089b3&upstream=icu", "pkg:deb/debian/liblzma5@5.4.1-0.2?arch=arm64&distro=debian-12&package-id=9ec1f27a2e25191d&upstream=xz-utils", "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12&package-id=a170ac78823fc346&upstream=zlib" ]
+  }, {
+    "ref" : "pkg:deb/debian/libxpm4@1%3A3.5.12-1.1%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=2841ec50a992889b&upstream=libxpm",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libx11-6@2%3A1.8.4-2%2Bdeb12u2?arch=arm64&distro=debian-12&package-id=a3e871446b414107&upstream=libx11" ]
+  }, {
+    "ref" : "pkg:deb/debian/libxslt1.1@1.1.35-1?arch=arm64&distro=debian-12&package-id=88603ffc45869371&upstream=libxslt",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgcrypt20@1.10.1-3?arch=arm64&distro=debian-12&package-id=629b91a1aab047fe", "pkg:deb/debian/libxml2@2.9.14%2Bdfsg-1.3~deb12u1?arch=arm64&distro=debian-12&package-id=33d98eb1837c151a" ]
+  }, {
+    "ref" : "pkg:deb/debian/libxxhash0@0.8.1-1?arch=arm64&distro=debian-12&package-id=cd0e085f499c54bc&upstream=xxhash",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/libyuv0@0.0~git20230123.b2528b0-1?arch=arm64&distro=debian-12&package-id=65069e3618b4aefd&upstream=libyuv",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgcc-s1@12.2.0-14?arch=arm64&distro=debian-12&package-id=1cdf12287c79fe5e&upstream=gcc-12", "pkg:deb/debian/libjpeg62-turbo@1%3A2.1.5-2?arch=arm64&distro=debian-12&package-id=b93f72807228971e&upstream=libjpeg-turbo", "pkg:deb/debian/libstdc%2B%2B6@12.2.0-14?arch=arm64&distro=debian-12&package-id=d47f67610d2da2f8&upstream=gcc-12" ]
+  }, {
+    "ref" : "pkg:deb/debian/libzstd1@1.5.4%2Bdfsg2-5?arch=arm64&distro=debian-12&package-id=ed0f3ed49cc25d51&upstream=libzstd",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/login@1%3A4.13%2Bdfsg1-1%2Bb1?arch=arm64&distro=debian-12&package-id=7926f497f3353236&upstream=shadow%401%3A4.13%2Bdfsg1-1",
+    "dependsOn" : [ "pkg:deb/debian/libaudit1@1%3A3.0.9-1?arch=arm64&distro=debian-12&package-id=857a57df10c74f73&upstream=audit", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libcrypt1@1%3A4.4.33-2?arch=arm64&distro=debian-12&package-id=f7e096a3d31f60bd&upstream=libxcrypt", "pkg:deb/debian/libpam-modules@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=50cd9ca9242b679d&upstream=pam", "pkg:deb/debian/libpam-runtime@1.5.2-6%2Bdeb12u1?arch=all&distro=debian-12&package-id=a126848aaa09495b&upstream=pam", "pkg:deb/debian/libpam0g@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=be57b1c45f01ad58&upstream=pam" ]
+  }, {
+    "ref" : "pkg:deb/debian/logsave@1.47.0-2?arch=arm64&distro=debian-12&package-id=6c6c48daa39e00d5&upstream=e2fsprogs",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/mawk@1.3.4.20200120-3.1?arch=arm64&distro=debian-12&package-id=0dd7f96d46b9713a",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/mount@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=30465f3b96e96376&upstream=util-linux",
+    "dependsOn" : [ "pkg:deb/debian/libblkid1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=31031b630e9a55a7&upstream=util-linux", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libmount1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=0e82cdbb39a98409&upstream=util-linux", "pkg:deb/debian/libselinux1@3.4-1%2Bb6?arch=arm64&distro=debian-12&package-id=95c977220986abef&upstream=libselinux%403.4-1", "pkg:deb/debian/libsmartcols1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=14c9ea59afcbb006&upstream=util-linux" ]
+  }, {
+    "ref" : "pkg:deb/debian/ncurses-bin@6.4-4?arch=arm64&distro=debian-12&package-id=b18a0123c4c62f3d&upstream=ncurses",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libtinfo6@6.4-4?arch=arm64&distro=debian-12&package-id=8382d07d6cff402e&upstream=ncurses" ]
+  }, {
+    "ref" : "pkg:deb/debian/nginx-module-geoip@1.27.4-1~bookworm?arch=arm64&distro=debian-12&package-id=fec1efee84594915",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgeoip1@1.6.12-10?arch=arm64&distro=debian-12&package-id=b44f3ed019e384b9&upstream=geoip", "pkg:deb/debian/nginx@1.27.4-1~bookworm?arch=arm64&distro=debian-12&package-id=e8ef4e78ead5b745" ]
+  }, {
+    "ref" : "pkg:deb/debian/nginx-module-image-filter@1.27.4-1~bookworm?arch=arm64&distro=debian-12&package-id=06e61dbda48e5357",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libgd3@2.3.3-9?arch=arm64&distro=debian-12&package-id=4615f0a3932ed881&upstream=libgd2", "pkg:deb/debian/nginx@1.27.4-1~bookworm?arch=arm64&distro=debian-12&package-id=e8ef4e78ead5b745" ]
+  }, {
+    "ref" : "pkg:deb/debian/nginx-module-njs@1.27.4%2B0.8.9-1~bookworm?arch=arm64&distro=debian-12&package-id=7200f5c29a0cab41",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libedit2@3.1-20221030-2?arch=arm64&distro=debian-12&package-id=dac89db493bdd296&upstream=libedit", "pkg:deb/debian/libpcre2-8-0@10.42-1?arch=arm64&distro=debian-12&package-id=8405f43b36a40e43&upstream=pcre2", "pkg:deb/debian/libssl3@3.0.15-1~deb12u1?arch=arm64&distro=debian-12&package-id=a917ea38b01a8358&upstream=openssl", "pkg:deb/debian/libxml2@2.9.14%2Bdfsg-1.3~deb12u1?arch=arm64&distro=debian-12&package-id=33d98eb1837c151a", "pkg:deb/debian/nginx@1.27.4-1~bookworm?arch=arm64&distro=debian-12&package-id=e8ef4e78ead5b745", "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12&package-id=a170ac78823fc346&upstream=zlib" ]
+  }, {
+    "ref" : "pkg:deb/debian/nginx-module-xslt@1.27.4-1~bookworm?arch=arm64&distro=debian-12&package-id=88e9971c90eb9454",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libxml2@2.9.14%2Bdfsg-1.3~deb12u1?arch=arm64&distro=debian-12&package-id=33d98eb1837c151a", "pkg:deb/debian/libxslt1.1@1.1.35-1?arch=arm64&distro=debian-12&package-id=88603ffc45869371&upstream=libxslt", "pkg:deb/debian/nginx@1.27.4-1~bookworm?arch=arm64&distro=debian-12&package-id=e8ef4e78ead5b745" ]
+  }, {
+    "ref" : "pkg:deb/debian/nginx@1.27.4-1~bookworm?arch=arm64&distro=debian-12&package-id=e8ef4e78ead5b745",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libcrypt1@1%3A4.4.33-2?arch=arm64&distro=debian-12&package-id=f7e096a3d31f60bd&upstream=libxcrypt", "pkg:deb/debian/libpcre2-8-0@10.42-1?arch=arm64&distro=debian-12&package-id=8405f43b36a40e43&upstream=pcre2", "pkg:deb/debian/libssl3@3.0.15-1~deb12u1?arch=arm64&distro=debian-12&package-id=a917ea38b01a8358&upstream=openssl", "pkg:deb/debian/sysvinit-utils@3.06-4?arch=arm64&distro=debian-12&package-id=d49b863ae4bb66c8&upstream=sysvinit", "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12&package-id=a170ac78823fc346&upstream=zlib" ]
+  }, {
+    "ref" : "pkg:deb/debian/openssl@3.0.15-1~deb12u1?arch=arm64&distro=debian-12&package-id=c5efa7143754919b",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libssl3@3.0.15-1~deb12u1?arch=arm64&distro=debian-12&package-id=a917ea38b01a8358&upstream=openssl" ]
+  }, {
+    "ref" : "pkg:deb/debian/passwd@1%3A4.13%2Bdfsg1-1%2Bb1?arch=arm64&distro=debian-12&package-id=5a8f989d68008338&upstream=shadow%401%3A4.13%2Bdfsg1-1",
+    "dependsOn" : [ "pkg:deb/debian/libaudit1@1%3A3.0.9-1?arch=arm64&distro=debian-12&package-id=857a57df10c74f73&upstream=audit", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libcrypt1@1%3A4.4.33-2?arch=arm64&distro=debian-12&package-id=f7e096a3d31f60bd&upstream=libxcrypt", "pkg:deb/debian/libpam-modules@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=50cd9ca9242b679d&upstream=pam", "pkg:deb/debian/libpam0g@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=be57b1c45f01ad58&upstream=pam", "pkg:deb/debian/libselinux1@3.4-1%2Bb6?arch=arm64&distro=debian-12&package-id=95c977220986abef&upstream=libselinux%403.4-1", "pkg:deb/debian/libsemanage2@3.4-1%2Bb5?arch=arm64&distro=debian-12&package-id=3488db2b3bc193da&upstream=libsemanage%403.4-1" ]
+  }, {
+    "ref" : "pkg:deb/debian/perl-base@5.36.0-7%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=2ec7261127139532&upstream=perl",
+    "dependsOn" : [ "pkg:deb/debian/dpkg@1.21.22?arch=arm64&distro=debian-12&package-id=6d02683637f83170", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libcrypt1@1%3A4.4.33-2?arch=arm64&distro=debian-12&package-id=f7e096a3d31f60bd&upstream=libxcrypt" ]
+  }, {
+    "ref" : "pkg:deb/debian/sed@4.9-1?arch=arm64&distro=debian-12&package-id=d9dc82592c2b4bd7",
+    "dependsOn" : [ "pkg:deb/debian/libacl1@2.3.1-3?arch=arm64&distro=debian-12&package-id=76baee1e9b2c209e&upstream=acl", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libselinux1@3.4-1%2Bb6?arch=arm64&distro=debian-12&package-id=95c977220986abef&upstream=libselinux%403.4-1" ]
+  }, {
+    "ref" : "pkg:deb/debian/sysvinit-utils@3.06-4?arch=arm64&distro=debian-12&package-id=d49b863ae4bb66c8&upstream=sysvinit",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  }, {
+    "ref" : "pkg:deb/debian/tar@1.34%2Bdfsg-1.2%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=2f2707c84812dc3c",
+    "dependsOn" : [ "pkg:deb/debian/libacl1@2.3.1-3?arch=arm64&distro=debian-12&package-id=76baee1e9b2c209e&upstream=acl", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libselinux1@3.4-1%2Bb6?arch=arm64&distro=debian-12&package-id=95c977220986abef&upstream=libselinux%403.4-1" ]
+  }, {
+    "ref" : "pkg:deb/debian/tzdata@2024b-0%2Bdeb12u1?arch=all&distro=debian-12&package-id=02cbff83d1670284",
+    "dependsOn" : [ "pkg:deb/debian/debconf@1.5.82?arch=all&distro=debian-12&package-id=cdc003dafb65af2e" ]
+  }, {
+    "ref" : "pkg:deb/debian/util-linux-extra@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=3e85f9d1b31764d2&upstream=util-linux",
+    "dependsOn" : [ "pkg:deb/debian/libaudit1@1%3A3.0.9-1?arch=arm64&distro=debian-12&package-id=857a57df10c74f73&upstream=audit", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libsmartcols1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=14c9ea59afcbb006&upstream=util-linux" ]
+  }, {
+    "ref" : "pkg:deb/debian/util-linux@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=10d1c8ad83b2a737",
+    "dependsOn" : [ "pkg:deb/debian/libblkid1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=31031b630e9a55a7&upstream=util-linux", "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc", "pkg:deb/debian/libcap-ng0@0.8.3-1%2Bb3?arch=arm64&distro=debian-12&package-id=31b3573383920f72&upstream=libcap-ng%400.8.3-1", "pkg:deb/debian/libcrypt1@1%3A4.4.33-2?arch=arm64&distro=debian-12&package-id=f7e096a3d31f60bd&upstream=libxcrypt", "pkg:deb/debian/libmount1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=0e82cdbb39a98409&upstream=util-linux", "pkg:deb/debian/libpam0g@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12&package-id=be57b1c45f01ad58&upstream=pam", "pkg:deb/debian/libselinux1@3.4-1%2Bb6?arch=arm64&distro=debian-12&package-id=95c977220986abef&upstream=libselinux%403.4-1", "pkg:deb/debian/libsmartcols1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=14c9ea59afcbb006&upstream=util-linux", "pkg:deb/debian/libsystemd0@252.33-1~deb12u1?arch=arm64&distro=debian-12&package-id=0096f21de00ac913&upstream=systemd", "pkg:deb/debian/libtinfo6@6.4-4?arch=arm64&distro=debian-12&package-id=8382d07d6cff402e&upstream=ncurses", "pkg:deb/debian/libudev1@252.33-1~deb12u1?arch=arm64&distro=debian-12&package-id=f11b97d2c7db6f96&upstream=systemd", "pkg:deb/debian/libuuid1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=149281e678fdbf34&upstream=util-linux", "pkg:deb/debian/util-linux-extra@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12&package-id=3e85f9d1b31764d2&upstream=util-linux", "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12&package-id=a170ac78823fc346&upstream=zlib" ]
+  }, {
+    "ref" : "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12&package-id=a170ac78823fc346&upstream=zlib",
+    "dependsOn" : [ "pkg:deb/debian/libc6@2.36-9%2Bdeb12u9?arch=arm64&distro=debian-12&package-id=bae00c748a1e624d&upstream=glibc" ]
+  } ]
+}

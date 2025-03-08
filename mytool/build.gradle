@@ -1,0 +1,35 @@
+plugins {
+  id 'java'
+  id 'application'
+  id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+group = 'com.example'
+version = '1.0.0'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.2'
+  // Optional: JUnit for tests
+  testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+}
+
+application {
+  // main.java.mytool.Main entry point class (contains public static void main)
+  mainClass = 'main.java.mytool.Main'
+}
+
+tasks.withType(JavaCompile) {
+  sourceCompatibility = '17'
+  targetCompatibility = '17'
+}
+
+tasks.test {
+  useJUnitPlatform()
+}
+
+// Shadow plugin will create a "fat JAR" with all dependencies included.
+// Run: ./gradlew clean shadowJar
